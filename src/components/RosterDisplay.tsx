@@ -41,7 +41,7 @@ const RosterDisplay: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col w-full">
       <div className="flex flex-col grow px-5 gap-5">
-        {roster && roster.map(({ character, player }) => <RosterCharacter character={character} player={player} />)}
+        {roster && roster.map(({ character, player }) => <RosterCharacter key={character.name} character={character} player={player} />)}
       </div>
       <button type="button" className="large w-full px-4 h-20 bg-radial-[at_15%_15%] from-sky-500 via-sky-600 to-sky-800" onClick={shuffleChars}>
         Randomize

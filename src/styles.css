@@ -95,7 +95,7 @@
 
   .amber-gradient {
     @apply bg-amber-200;
-    @apply bg-linear-to-r from-amber-950/80 to-amber-800/45;
+    @apply bg-linear-to-r from-amber-950/80 to-amber-800/65;
     @apply text-amber-100;
   }
 }
@@ -112,9 +112,7 @@
     font-family: Alegreya Sans,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 1.25!important;
-    letter-spacing: .1em;
-    --tw-text-opacity: 1;
+    letter-spacing: .08em;
   }
 
   .is-link {

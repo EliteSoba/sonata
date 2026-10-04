@@ -8,7 +8,7 @@ interface Props {
 
 const RosterCharacter: React.FC<Props> = ({ character, player }) => {
   return (
-    <div className="amber-gradient font-sans tracking-wider rounded-md flex items-center justify-between">
+    <div className="amber-gradient font-sans tracking-wider rounded-lg flex items-center justify-between overflow-hidden select-none">
       <div className="max-w-1/3">
         <img src={character.image} />
       </div>

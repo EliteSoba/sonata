@@ -43,17 +43,17 @@ const Options: React.FC<Props> = ({ enabled }) => {
         key={char.name}
         disabled={!enabled}
         onClick={() => updateChar(char.name, !char.available)}
-        className="rounded-md border p-3 my-4 mx-2 flex items-center text-left justify-evenly"
+        className="rounded-md border p-3 md:px-5 flex items-center text-left justify-between"
       >
-        <div className="w-40 text-2xl">{char.name}</div>
-        <div className="w-20">{getCharStatus(char)}</div>
+        <div className="text-sm sm:text-2xl">{char.name}</div>
+        <div className="text-sm sm:text-2xl">{getCharStatus(char)}</div>
       </button>
     );
   }
   return (
-    <div className={`${!enabled && 'opacity-0'} duration-500 relative h-0 overflow-visible z-100 w-full border-8 border-transparent box-border`}>
-      <div className={`${!enabled && '-translate-y-150'} duration-500 absolute bg-white rounded-2xl p-4 sm:w-full`}>
-        <div className="max-h-[calc(100dvh-230px)] overflow-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+    <div className={`${!enabled && 'opacity-0 pointer-events-none'} duration-500 relative h-0 overflow-visible z-100 w-full border-8 border-transparent box-border`}>
+      <div className={`${!enabled && '-translate-y-150'} duration-500 absolute bg-white rounded-2xl p-4 w-full`}>
+        <div className="max-h-[calc(100dvh-230px)] overflow-auto gap-4 px-2 grid grid-cols-2">
           {chars.map(char => renderOption(char))}
         </div>
       </div>
