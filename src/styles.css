@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@font-face {
+  font-display: swap;
+  font-family: Alegreya;
+  font-style: normal;
+  font-weight: 400 900;
+  src: url(./fonts/alegreya-v38-latin-variable.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Alegreya;
+  font-style: italic;
+  font-weight: 400 900;
+  src: url(./fonts/alegreya-italic-v38-latin-variable.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Alegreya Sans;
+  font-style: normal;
+  font-weight: 500;
+  src: url(./fonts/alegreya-sans-v25-latin-500.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Alegreya Sans;
+  font-style: italic;
+  font-weight: 500;
+  src: url(./fonts/alegreya-sans-v25-latin-500italic.woff2) format("woff2")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Alegreya Sans;
+  font-style: normal;
+  font-weight: 700;
+  src: url(./fonts/alegreya-sans-v25-latin-700.woff2) format("woff2")
+}
+
+@theme {
+  --font-sans: Alegreya Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  --color-emerald-darkest: oklch(0.22 0.04 169.37);
+  --color-emerald-925: oklch(0.32 0.06 170.95);
+  --color-emerald-935: oklch(0.29 0.05 171.78);
+
+  --animate-rainbow: rainbow 3s ease-in-out infinite;
+  @keyframes rainbow {
+    0% {
+      color: var(--color-red-600);
+    }
+    10% {
+      color: var(--color-orange-600);
+    }
+    20% {
+      color: var(--color-yellow-600);
+    }
+    30% {
+      color: var(--color-green-600);
+    }
+    40% {
+      color: var(--color-teal-600);
+    }
+    50% {
+      color: var(--color-sky-600);
+    }
+    60% {
+      color: var(--color-blue-600);
+    }
+    70% {
+      color: var(--color-violet-600);
+    }
+    80% {
+      color: var(--color-fuchsia-600);
+    }
+    90% {
+      color: var(--color-pink-600);
+    }
+    100% {
+      color: var(--color-red-600);
+    }
+  }
+}
+
+@layer components {
+  .underlined-text {
+    @apply decoration-1 underline-offset-4;
+
+    @variant hover {
+      @apply underline;
+    }
+  }
+
+  .amber-gradient {
+    @apply bg-amber-200;
+    @apply bg-linear-to-r from-amber-950/80 to-amber-800/45;
+    @apply text-amber-100;
+  }
+}
+
+@layer base {
+  html {
+    font-family: Alegreya,ui-serif,Georgia,Cambria,Times New Roman,Times,serif;
+    @apply tracking-wide;
+  }
+
+  h1,h2,h3,h4 {
+    user-select: none;
+    padding: 0;
+    font-family: Alegreya Sans,ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.25!important;
+    letter-spacing: .1em;
+    --tw-text-opacity: 1;
+  }
+
+  .is-link {
+    @apply text-cyan-200;
+    @apply underline;
+    @apply decoration-1;
+    @apply underline-offset-4;
+    @apply not-italic;
+  }
+
+  hr {
+    @apply my-4;
+    @apply border-t-2;
+    @apply border-dotted;
+    @apply bg-transparent;
+  }
+
+  button, [role="button"] {
+    cursor: pointer;
+  }
+
+  button.large {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Alegreya Sans, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: 1.875rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .025em;
+    --tw-text-opacity: 0.85;
+    color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+    text-decoration-line: none;
+  }
+
+  button.large:hover:enabled {
+    --tw-text-opacity: 1;
+  }
+
+  .default-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
