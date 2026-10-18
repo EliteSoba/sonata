@@ -9,6 +9,8 @@ import salsa from '../assets/salsa.png';
 import jazz from '../assets/jazz.png';
 import claves from '../assets/claves.png';
 import falsetto from '../assets/falsetto.png';
+import crescendo from '../assets/crescendo.png';
+import serenade from '../assets/serenade.png';
 import unknown from '../assets/unknown.png';
 
 export class character {
@@ -46,5 +48,7 @@ export const Characters: Character[] = [
   new character({ name: 'Jazz', image: jazz }),
   new character({ name: 'Claves', image: claves, status: CharacterStatuses.DEAD }),
   new character({ name: 'Falsetto', image: falsetto }),
-  new character({ name: 'Other', image: unknown })
+  new character({ name: 'Crescendo', image: crescendo }),
+  new character({ name: 'Serenade', image: serenade }),
+  new character({ name: 'Other', image: unknown }),
 ];
